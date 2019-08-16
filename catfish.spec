@@ -12,6 +12,7 @@ BuildRequires:	intltool
 BuildRequires:	desktop-file-utils
 BuildRequires:	python-devel
 BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	python3dist(python-distutils-extra)
 Requires:	python-pyxdg
 Requires:	python-dbus
 Requires:	mlocate
