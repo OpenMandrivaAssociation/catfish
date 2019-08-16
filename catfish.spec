@@ -1,7 +1,7 @@
 Summary:	A handy file search tool
 Name:		catfish
-Version:	0.6.4
-Release:	6
+Version:	1.4.9
+Release:	1
 Group:		File tools
 License:	GPLv2+
 Url:		http://twotoasts.de/index.php/catfish
@@ -11,7 +11,7 @@ BuildRequires:	gettext
 BuildRequires:	intltool
 BuildRequires:	desktop-file-utils
 BuildRequires:	python-devel
-Requires:	pygtk2.0-libglade
+BuildRequires:	pkgconfig(gtk+-3.0)
 Requires:	python-pyxdg
 Requires:	python-dbus
 Requires:	mlocate
@@ -28,37 +28,29 @@ it to your needs by using several command line options.
 %setup -q
 
 %build
-sed -i.misc \
-	-e '/svg/s|install|install -m 644|' \
-	-e '/glade/s|install| install -m 644|' \
-	-e 's|install |install -p |' \
-	-e 's|pyc|py|' \
-	-e 's|^\([ \t]*\)ln |\1: ln |' \
-	-e 's|cp -rf|cp -prf|' \
-	Makefile.in.in
-
-# --libdir= option doesn't work here.
-./configure --prefix=%{_prefix}
+%py3_build
 
 %install
-%makeinstall_std
-
+CFLAGS="%{optflags}" %__python3 setup.py install -O1 --root %{buildroot}
 
 desktop-file-install \
 	--remove-category="Utility" \
 	--add-category='System' \
 	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
-rm -rf %{buildroot}%{_datadir}/doc/
-
-ln -sf ../pixmaps/%{name}.svg %{buildroot}%{_datadir}/%{name}/
-ln -sf ../locale/ %{buildroot}%{_datadir}/%{name}/
+# handle docs in files section
+rm -rf %{buildroot}%{_docdir}
 
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS ChangeLog README TODO
+%doc AUTHORS ChangeLog README
 %{_bindir}/%{name}
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/org.xfce.Catfish.desktop
+%{_datadir}/metainfo/catfish.appdata.xml
 %{_datadir}/%{name}/
-%{_iconsdir}/hicolor/scalable/apps/%{name}.svg
+%{_iconsdir}/hicolor/scalable/apps/*.svg
+%{_mandir}/man1/%{name}.1*
+%{python_sitelib}/%{name}/
+%{python_sitelib}/%{name}_lib/
+%{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
