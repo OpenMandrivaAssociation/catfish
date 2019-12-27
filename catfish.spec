@@ -1,6 +1,6 @@
 Summary:	A handy file search tool
 Name:		catfish
-Version:	1.4.10
+Version:	1.4.11
 Release:	1
 Group:		File tools
 License:	GPLv2+
