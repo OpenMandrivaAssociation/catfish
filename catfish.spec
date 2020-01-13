@@ -1,6 +1,6 @@
 Summary:	A handy file search tool
 Name:		catfish
-Version:	1.4.11
+Version:	1.4.12
 Release:	1
 Group:		File tools
 License:	GPLv2+
@@ -13,6 +13,8 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	python-devel
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	python3dist(python-distutils-extra)
+BuildRequires:  pkgconfig(pygobject-3.0)
+BuildRequires:  python3.8dist(pygobject)
 Requires:	python-pyxdg
 Requires:	python-dbus
 Requires:	mlocate
