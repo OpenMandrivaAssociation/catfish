@@ -1,6 +1,6 @@
 Summary:	A handy file search tool
 Name:		catfish
-Version:	1.4.12
+Version:	1.4.13
 Release:	1
 Group:		File tools
 License:	GPLv2+
@@ -31,7 +31,7 @@ it to your needs by using several command line options.
 %setup -q
 
 %build
-%py3_build
+%py_build
 
 %install
 CFLAGS="%{optflags}" %__python3 setup.py install -O1 --root %{buildroot}
