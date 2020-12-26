@@ -47,7 +47,7 @@ rm -rf %{buildroot}%{_docdir}
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS ChangeLog README
+%doc AUTHORS README*
 %{_bindir}/%{name}
 %{_datadir}/applications/org.xfce.Catfish.desktop
 %{_datadir}/metainfo/catfish.appdata.xml
