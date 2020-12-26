@@ -1,6 +1,6 @@
 Summary:	A handy file search tool
 Name:		catfish
-Version:	1.4.13
+Version:	4.15.0
 Release:	1
 Group:		File tools
 License:	GPLv2+
@@ -14,7 +14,7 @@ BuildRequires:	python-devel
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	python3dist(python-distutils-extra)
 BuildRequires:  pkgconfig(pygobject-3.0)
-BuildRequires:  python3.8dist(pygobject)
+BuildRequires:  python3dist(pygobject)
 Requires:	python-pyxdg
 Requires:	python-dbus
 Requires:	mlocate
@@ -47,7 +47,7 @@ rm -rf %{buildroot}%{_docdir}
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS ChangeLog README
+%doc AUTHORS README*
 %{_bindir}/%{name}
 %{_datadir}/applications/org.xfce.Catfish.desktop
 %{_datadir}/metainfo/catfish.appdata.xml
@@ -57,3 +57,4 @@ rm -rf %{buildroot}%{_docdir}
 %{python_sitelib}/%{name}/
 %{python_sitelib}/%{name}_lib/
 %{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
+%{_iconsdir}/hicolor/*x*/apps/org.xfce.catfish.*
