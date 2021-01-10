@@ -1,6 +1,6 @@
 Summary:	A handy file search tool
 Name:		catfish
-Version:	4.15.0
+Version:	4.16.0
 Release:	1
 Group:		File tools
 License:	GPLv2+
@@ -24,7 +24,7 @@ Requires:	findutils
 A handy file searching tool for linux. Basically it is a
 frontend for different search engines (daemons) which
 provides a unified interface. The interface is intentionally
-lightweight and simple, using only GTK+ 2. You can configure
+lightweight and simple, using only GTK+ 3. You can configure
 it to your needs by using several command line options.
 
 %prep
