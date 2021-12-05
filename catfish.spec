@@ -1,11 +1,11 @@
 Summary:	A handy file search tool
 Name:		catfish
-Version:	4.16.2
+Version:	4.16.3
 Release:	1
 Group:		File tools
 License:	GPLv2+
 Url:		http://twotoasts.de/index.php/catfish
-Source0:	http://archive.xfce.org/src/apps/catfish/1.4/%{name}-%{version}.tar.bz2
+Source0:	http://archive.xfce.org/src/apps/catfish/4.16/%{name}-%{version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	gettext
 BuildRequires:	intltool
