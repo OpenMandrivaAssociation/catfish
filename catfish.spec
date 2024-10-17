@@ -4,7 +4,7 @@ Version:	4.18.0
 Release:	1
 Group:		File tools
 License:	GPLv2+
-Url:		http://twotoasts.de/index.php/catfish
+Url:		https://twotoasts.de/index.php/catfish
 Source0:	http://archive.xfce.org/src/apps/catfish/4.16/%{name}-%{version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	gettext
