@@ -1,11 +1,11 @@
 Summary:	A handy file search tool
 Name:		catfish
-Version:	4.18.0
+Version:	4.20.0
 Release:	1
 Group:		File tools
 License:	GPLv2+
 Url:		https://twotoasts.de/index.php/catfish
-Source0:	http://archive.xfce.org/src/apps/catfish/4.16/%{name}-%{version}.tar.bz2
+Source0:	https://archive.xfce.org/src/apps/catfish/4.16/%{name}-%{version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	gettext
 BuildRequires:	intltool
@@ -28,7 +28,7 @@ lightweight and simple, using only GTK+ 3. You can configure
 it to your needs by using several command line options.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %py_build
