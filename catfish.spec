@@ -7,6 +7,7 @@ License:	GPLv2+
 Url:		https://twotoasts.de/index.php/catfish
 Source0:	https://archive.xfce.org/src/apps/catfish/4.16/%{name}-%{version}.tar.bz2
 BuildArch:	noarch
+BuildRequires:	meson
 BuildRequires:	gettext
 BuildRequires:	intltool
 BuildRequires:	desktop-file-utils
@@ -31,15 +32,11 @@ it to your needs by using several command line options.
 %autosetup -p1
 
 %build
-%py_build
+%meson
+%meson_build
 
 %install
-CFLAGS="%{optflags}" %__python3 setup.py install -O1 --root %{buildroot}
-
-desktop-file-install \
-	--remove-category="Utility" \
-	--add-category='System' \
-	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
+%meson_install
 
 # handle docs in files section
 rm -rf %{buildroot}%{_docdir}
