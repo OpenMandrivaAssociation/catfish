@@ -17,6 +17,9 @@ BuildRequires:	python3dist(python-distutils-extra)
 BuildRequires:  pkgconfig(pygobject-3.0)
 BuildRequires:  python3dist(pygobject)
 BuildRequires:  python-gi
+BuildRequires:  python-dbus
+BuildRequires:  python-pexpect
+
 Requires:	python-pyxdg
 Requires:	python-dbus
 Requires:	mlocate
