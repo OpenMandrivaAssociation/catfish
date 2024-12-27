@@ -58,5 +58,4 @@ rm -rf %{buildroot}%{_docdir}
 %{_mandir}/man1/%{name}.1*
 %{python_sitelib}/%{name}/
 %{python_sitelib}/%{name}_lib/
-%{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
 %{_iconsdir}/hicolor/*x*/apps/org.xfce.catfish.*
