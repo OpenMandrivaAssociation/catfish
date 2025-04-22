@@ -1,11 +1,13 @@
+%define url_ver %(echo %{version} | cut -d. -f 1,2)
+
 Summary:	A handy file search tool
 Name:		catfish
 Version:	4.20.0
-Release:	2
+Release:	3
 Group:		File tools
 License:	GPLv2+
 Url:		https://twotoasts.de/index.php/catfish
-Source0:	https://archive.xfce.org/src/apps/catfish/4.16/%{name}-%{version}.tar.bz2
+Source0:	https://archive.xfce.org/src/apps/catfish/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	meson
 BuildRequires:	gettext
@@ -13,15 +15,15 @@ BuildRequires:	intltool
 BuildRequires:	desktop-file-utils
 BuildRequires:	python-devel
 BuildRequires:	pkgconfig(gtk+-3.0)
-BuildRequires:  pkgconfig(libxfconf-0)
+BuildRequires:	pkgconfig(libxfconf-0)
 BuildRequires:	python3dist(python-distutils-extra)
-BuildRequires:  pkgconfig(pygobject-3.0)
-BuildRequires:  python3dist(pygobject)
-BuildRequires:  python-gi
-BuildRequires:  python-dbus
-BuildRequires:  python-pexpect
+BuildRequires:	pkgconfig(pygobject-3.0)
+BuildRequires:	python3dist(pygobject)
+BuildRequires:	python-gi
+BuildRequires:	python-dbus
+BuildRequires:	python-pexpect
 
-Requires:  python-pexpect
+Requires:	python-pexpect
 Requires:	python-pyxdg
 Requires:	python-dbus
 Requires:	mlocate
