@@ -26,7 +26,7 @@ BuildRequires:	python-pexpect
 Requires:	python-pexpect
 Requires:	python-pyxdg
 Requires:	python-dbus
-Requires:	mlocate
+Requires:	plocate
 Requires:	findutils
 
 %description
