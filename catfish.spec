@@ -3,7 +3,7 @@
 Summary:	A handy file search tool
 Name:		catfish
 Version:	4.20.0
-Release:	3
+Release:	4
 Group:		File tools
 License:	GPLv2+
 Url:		https://twotoasts.de/index.php/catfish
@@ -26,7 +26,7 @@ BuildRequires:	python-pexpect
 Requires:	python-pexpect
 Requires:	python-pyxdg
 Requires:	python-dbus
-Requires:	plocate
+Requires:	(mlocate or plocate)
 Requires:	findutils
 
 %description
