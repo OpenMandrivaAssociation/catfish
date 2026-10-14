@@ -3,7 +3,7 @@
 Summary:	A handy file search tool
 Name:		catfish
 Version:	4.20.1
-Release:	2
+Release:	3
 Group:		File tools
 License:	GPLv2+
 Url:		https://twotoasts.de/index.php/catfish
@@ -13,12 +13,12 @@ BuildRequires:	meson
 BuildRequires:	gettext
 BuildRequires:	intltool
 BuildRequires:	desktop-file-utils
-BuildRequires:	python-devel
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxfconf-0)
-BuildRequires:	python3dist(python-distutils-extra)
+BuildRequires:	python%{pyver}dist(python-distutils-extra)
 BuildRequires:	pkgconfig(pygobject-3.0)
-BuildRequires:	python3dist(pygobject)
+BuildRequires:	python%{pyver}dist(pygobject)
 BuildRequires:	python-gi
 BuildRequires:	python-dbus
 BuildRequires:	python-pexpect
